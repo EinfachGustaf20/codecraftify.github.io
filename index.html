@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-site-verification" content="ZVT2i4eU5fksGJMqYtKZgeBlj_B2lop-gXuHkv25oJM" /> <!-- Hier einfügen -->
+        <link rel="stylesheet" href="styles.css">
+        <title>CodeCraftify</title>
+    </head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="CodeCraftify.png" alt="Alex Studio Logo" class="logo">
+            <h1>CodeCraftify</h1>
+            <p>Deine kreative Softwareentwicklungsplattform</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#projects">Unsere Projekte</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="container">
+        <h2>Über uns</h2>
+        <p>Detaillierte Informationen über das Team, unsere Mission und unsere Erfahrungen im Bereich der Softwareentwicklung.</p>
+    </section>
+
+    <section id="projects" class="container dark-bg">
+        <h2>Unsere Projekte</h2>
+        <!-- Hier könntest du eine Galerie oder Liste von Projekten einfügen -->
+    </section>
+
+    <section id="contact" class="container dark-bg">
+        <h2>Kontakt</h2>
+        <!-- Hier könntest du deine Kontaktinformationen oder ein Kontaktformular einfügen -->
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CodeCraftify. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAA78dhrq7gMVQFoO5fsrO5FYHKSCLiCwk",
+          authDomain: "codecraftify.firebaseapp.com",
+          projectId: "codecraftify",
+          storageBucket: "codecraftify.appspot.com",
+          messagingSenderId: "120251359713",
+          appId: "1:120251359713:web:ba1930b570de3207aab2a0",
+          measurementId: "G-LX5JL8MSRS"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
