@@ -1,0 +1,171 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header, nav, section, footer {
+    padding: 20px 0;
+}
+
+header {
+    text-align: left;
+    position: relative;
+    height: 100vh; /* Setze die Höhe auf die volle Bildschirmhöhe */
+    overflow: hidden; /* Verhindere, dass der Inhalt über den Header hinausragt */
+    background-image: url('background.jpg'); /* Hintergrundbild für den Parallax-Effekt */
+    background-size: cover;
+    background-position: center;
+}
+
+header .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Zentriere den Inhalt vertikal und horizontal */
+    z-index: 1; /* Stelle sicher, dass der Inhalt über dem Hintergrundbild liegt */
+}
+
+header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Hintergrundfarbe mit Transparenz für den Header */
+    z-index: 0; /* Stelle sicher, dass dieser Hintergrund hinter dem Inhalt liegt */
+    opacity: 0.5; /* Verringere die Deckkraft des Overlay */
+}
+
+/* Füge den Parallax-Effekt für das Hintergrundbild hinzu */
+header {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Übergangseffekt für den Header beim Scrollen */
+header.visible:before {
+    background-color: rgba(255, 255, 255, 0); /* Ändere die Hintergrundfarbe zu transparent */
+}
+
+/* Füge die Parallax-Effekte für den Header hinzu */
+header img {
+    max-height: 150px; /* Vergrößere die Höhe des Logos */
+    margin-right: 20px; /* Füge einen Abstand zwischen dem Logo und dem Text hinzu */
+    float: left; /* Lasse das Logo links ausgerichtet */
+    transition: transform 0.5s ease; /* Füge einen Übergangseffekt für das Bild hinzu */
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #4285f4;
+    margin-left: 200px; /* Füge einen Abstand zwischen dem Logo und dem Text hinzu */
+    transition: transform 0.5s ease; /* Füge einen Übergangseffekt für den Titel hinzu */
+}
+
+header p {
+    font-size: 1.2em;
+    color: #666;
+    margin-left: 200px; /* Füge einen Abstand zwischen dem Logo und dem Text hinzu */
+    transition: transform 0.5s ease; /* Füge einen Übergangseffekt für den Text hinzu */
+}
+
+header.visible img {
+    transform: translateY(-50px); /* Verschiebe das Bild nach oben beim Scrollen */
+}
+
+header.visible h1 {
+    transform: translateY(-50px); /* Verschiebe den Titel nach oben beim Scrollen */
+}
+
+header.visible p {
+    transform: translateY(-50px); /* Verschiebe den Text nach oben beim Scrollen */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #4285f4;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #4285f4;
+}
+
+section p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.dark-bg {
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    background-color: #4285f4;
+    color: #fff;
+}
+
+#thanks {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#thanks h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+#thanks p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.highlight {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* JavaScript hinzugefügt */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.external-link {
+    color: #555; /* Ändere die Farbe des Links nach Bedarf */
+    text-decoration: underline; /* Füge eine Unterstreichung hinzu, um den Link zu kennzeichnen */
+}
